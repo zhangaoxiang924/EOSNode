@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // logger
-const logDir = '/data/node_site/www.huoxing24.com/logs'
+const logDir = '/data/node_site/www.eosgalaxy.io/logs'
 fs.existsSync(logDir) || fs.mkdirSync(logDir)
 const accessLogStream = fileStreamRotator.getStream({
     date_format: 'YYYYMMDD',
@@ -40,16 +40,8 @@ app.use(express.urlencoded({extended: false}))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/eosGalaxy', eosGalaxyRouter)
-app.use('/eosGalaxyM', eosGalaxyMRouter)
-
-// react-router browserhistory
-app.get([
-    '/',
-    '/index'
-], function (req, res) {
-    res.sendFile(path.resolve(__dirname, 'public/static/index.html'))
-})
+app.use('/', eosGalaxyRouter)
+app.use('/m', eosGalaxyMRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
