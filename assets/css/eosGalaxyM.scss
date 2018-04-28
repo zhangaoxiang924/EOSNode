@@ -1,0 +1,470 @@
+/**
+ * Author：zax
+ * Time：2018/4/26
+ * Description：Description
+ */
+
+@import "./public/normalize";
+@import "./public/public";
+@import "./public/rem";
+
+html,
+body {
+    min-width: 100%;
+}
+
+@mixin w-c {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.eos-node {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    // nav弹框
+    .menu-modal {
+        display: none;
+        touch-action: none;
+        position: absolute;
+        top: 0;
+        z-index: 11;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+
+        .close-modal {
+            width: rem(40);
+            height: rem(40);
+            background: url("../img/eosGalaxyM/close.png") no-repeat center 100% / 100%;
+            position: absolute;
+            top: rem(30);
+            left: rem(30);
+        }
+
+        .net-title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: rem(145);
+
+            a {
+                @include w-c;
+
+                font-size: rem(28);
+                margin: rem(37) 0;
+
+                &.active {
+                    color: #59ffff;
+                }
+            }
+        }
+    }
+
+    // title 统一样式
+    .section-title {
+        text-align: center;
+        font-size: rem(30);
+        margin-top: rem(75);
+
+        span {
+            padding: rem(3) rem(8);
+            border-radius: rem(4);
+            display: inline-block;
+            position: relative;
+            background: #c9a0ff;
+            background: linear-gradient(120deg, #5868eb 10%, #bd83ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #e9e9e9;
+
+            &:after {
+                display: inline-block;
+                content: '';
+                width: rem(24);
+                height: rem(2);
+                background: linear-gradient(150deg, #5868eb 40%, #ab61ff);
+                position: absolute;
+                bottom: rem(-22);
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    // home 样式
+    .eos-node-header {
+        position: relative;
+        width: 100%;
+        height: rem(960);
+        background: #112;
+        background: url("../img/eosGalaxy/home-bg.png") no-repeat top \9 \0;
+        background-size: cover \9 \0;
+
+        #scene {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+        }
+
+        .language-btns {
+            position: absolute;
+            top: rem(32);
+            right: rem(32);
+            font-size: rem(24);
+            z-index: 11;
+
+            .line {
+                color: #7f7e87;
+                margin: 0 rem(12);
+            }
+
+            .btn {
+                cursor: pointer;
+                color: #dedede;
+                user-select: none;
+
+                &.active,
+                &:hover {
+                    color: #65a3f5;
+                }
+            }
+        }
+
+        .menu-btn {
+            width: rem(44);
+            height: rem(38);
+            position: absolute;
+            top: rem(30);
+            left: rem(30);
+            background: url("../img/eosGalaxyM/menu.png") no-repeat center / 100% 100%;
+        }
+
+        .logo-img {
+            background: url("../img/eosGalaxyM/logo.png") no-repeat center / 100%;
+            width: rem(256);
+            height: rem(243);
+            margin: rem(224) auto rem(5);
+            position: relative;
+            z-index: 9;
+        }
+
+        .logo-text {
+            font-size: rem(72);
+            color: #fff;
+            text-align: center;
+            margin-top: rem(35);
+        }
+
+        .logo-slogon {
+            font-size: rem(48);
+            color: #fff;
+            text-align: center;
+            margin-top: rem(30);
+        }
+
+        .dots {
+            width: rem(15);
+            text-align: center;
+            position: fixed;
+            top: rem(320);
+            right: rem(50);
+            margin: auto;
+            z-index: 10;
+
+            .dot-item {
+                display: inline-block;
+                width: rem(10);
+                height: rem(10);
+                border-radius: 50%;
+                background: #2c3f64;
+                margin-bottom: rem(30);
+                transition: 0.1s;
+
+                &.active {
+                    width: rem(15);
+                    height: rem(15);
+                    background: #69aaff;
+                }
+            }
+        }
+    }
+
+    // 介绍样式
+    .eos-node-describe {
+        position: relative;
+        width: 100%;
+        height: rem(960);
+        background: url("../img/eosGalaxyM/des-bg.png") no-repeat top;
+        background-size: cover;
+
+        .description {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+
+            .slogan {
+                font-size: rem(50);
+                font-weight: bold;
+                margin: rem(85) 0 rem(45);
+            }
+
+            .paragraph {
+                margin: 0 auto rem(45);
+                width: rem(473);
+                font-size: rem(24);
+                line-height: rem(44);
+                color: #dfdfdf;
+            }
+        }
+    }
+
+    // 贡献样式
+    .eos-node-donate {
+        width: 100%;
+        height: rem(960);
+        background: url("../img/eosGalaxyM/donate-bg.jpg") no-repeat top;
+        background-size: cover;
+
+        .donate-btns {
+            margin: rem(93) auto 0;
+
+            .btn-item {
+                float: left;
+                margin-left: rem(80);
+                margin-bottom: rem(65);
+
+                .btn {
+                    width: rem(200);
+                    height: rem(200);
+                    border-radius: 50%;
+                    background: url("../img/eosGalaxy/donate-border.png") no-repeat center / 100%;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+
+                        &.media-icon {
+                            width: rem(85);
+                            height: rem(85);
+                        }
+
+                        &.donate-icon {
+                            width: rem(86);
+                            height: rem(80);
+                        }
+
+                        &.dapp-icon {
+                            width: rem(85);
+                            height: rem(89);
+                        }
+
+                        &.activy-icon {
+                            width: rem(80);
+                            height: rem(85);
+                        }
+                    }
+                }
+
+                .text {
+                    margin-top: rem(30);
+                    text-align: center;
+                    color: #fff;
+                    font-size: rem(30);
+                }
+            }
+        }
+    }
+
+    // 生态样式
+    .eos-node-ecology {
+        width: 100%;
+        height: rem(960);
+        background: url("../img/eosGalaxyM/ecology-bg.jpg") no-repeat top;
+        background-size: cover;
+
+        .ecology-intro {
+            margin: rem(124) auto 0;
+            display: flex;
+            justify-content: space-around;
+            font-size: 0;
+
+            .eoco-left {
+                width: rem(270);
+                height: rem(560);
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+            .eco-right {
+                width: rem(270);
+                height: rem(560);
+            }
+
+            .ecology-item {
+                width: rem(270);
+                position: relative;
+
+                .ecology-img {
+                    overflow: hidden;
+
+                    img {
+                        width: rem(270);
+                    }
+                }
+
+                .ecology-name {
+                    position: absolute;
+                    bottom: rem(35);
+                    right: rem(25);
+                    width: rem(175);
+                    text-align: right;
+                    font-size: rem(30);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // 团队样式
+    .eos-node-team {
+        width: 100%;
+        height: rem(960);
+        background: url("../img/eosGalaxyM/team-bg.jpg") no-repeat top;
+        background-size: cover;
+
+        .team-partner {
+            margin: rem(74) auto 0;
+
+            .swiper-container {
+                width: 100%;
+                text-align: center;
+
+                .swiper-item {
+                    display: inline-block;
+                    width: rem(260);
+
+                    .partner-img {
+                        width: 100%;
+                        background: #fff;
+                        height: rem(360);
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .desc {
+                        display: inline-block;
+                        text-align: center;
+
+                        .symbol {
+                            color: #0e0e0e;
+
+                            .partner-name {
+                                font-size: rem(36);
+                                margin: rem(30) auto rem(8);
+                                font-weight: bold;
+                            }
+
+                            .partner-title {
+                                font-size: rem(24);
+                            }
+                        }
+
+                        .line {
+                            display: inline-block;
+                            width: rem(24);
+                            height: rem(2);
+                            background: linear-gradient(150deg, #5868eb 40%, #ab61ff);
+                            margin: rem(20) 0;
+                        }
+
+                        .intro {
+                            color: #666;
+                            font-size: rem(24);
+                            line-height: rem(34);
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                left: 0;
+                right: 0;
+                margin: rem(30) auto 0;
+
+                .swiper-pagination-bullet-active {
+                    background: #000;
+                }
+
+                .swiper-pagination-bullet {
+                    margin: 0 rem(10);
+                }
+            }
+        }
+    }
+
+    // 底部
+    .eos-node-contact {
+        width: 100%;
+        height: rem(299);
+        background: url("../img/eosGalaxyM/contact-bg.jpg");
+        position: relative;
+
+        .contact-us {
+            text-align: center;
+            margin-top: rem(92);
+            margin-bottom: rem(58);
+            color: #fff;
+            font-size: rem(30);
+        }
+
+        .contact-icons {
+            margin: 0 auto;
+            text-align: center;
+
+            img {
+                cursor: pointer;
+                margin: 0 rem(30);
+
+                &.steemit {
+                    width: rem(81);
+                    height: rem(18);
+                }
+
+                &.reddit {
+                    width: rem(39);
+                    height: rem(32);
+                }
+
+                &.m {
+                    width: rem(30);
+                    height: rem(24);
+                }
+
+                &.git {
+                    width: rem(32);
+                    height: rem(26);
+                }
+
+                &.twitter {
+                    width: rem(32);
+                    height: rem(26);
+                }
+            }
+        }
+    }
+}

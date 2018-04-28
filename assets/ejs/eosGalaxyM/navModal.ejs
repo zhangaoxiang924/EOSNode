@@ -1,0 +1,8 @@
+<div class="menu-modal clearfix" data-info="<%= Date.parse(new Date())%>">
+    <span class="close-modal"></span>
+    <div class="net-title">
+        <% nav.map((item, index) => {%>
+        <a class="<%= item.path%> <%= index === 0 ? 'active' : ''%>" href="#<%= item.path%>"><%= item.name%></a>
+        <%})%>
+    </div>
+</div>

@@ -1,0 +1,476 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2018-04-08 15:50
+ * Description：header
+ */
+
+/* 头部导航 */
+.header-nav-wrap {
+    min-width: 1200px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-nav {
+    position: relative;
+    height: 60px;
+    width: 1198px;
+    line-height: 60px;
+    margin: 0 auto;
+    font-size: 18px;
+
+    .logo-img {
+        position: relative;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        height: auto;
+        width: 300px;
+
+        .logo {
+            float: left;
+            margin: 17px 5px 0 0;
+            height: 28px;
+            z-index: 100;
+            vertical-align: middle;
+        }
+
+        span {
+            float: left;
+            margin: 22px 0 0 8px;
+            padding-left: 12px;
+            border-left: 1px solid rgba(204, 204, 204, 1);
+            display: inline-block;
+            height: 18px;
+            color: #999;
+            font-family: microsoft yahei, sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    .nav-content {
+        text-align: right;
+        max-width: 100%;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        right: 100px;
+        margin: auto;
+        font-size: 0;
+
+        .nav-item {
+            display: inline-block;
+            //margin-right: 40px;
+            margin-right: 40px;
+            position: relative;
+
+            &:last-child {
+                //margin: 0;
+                margin-right: 160px;
+            }
+
+            /* &:nth-child(3) {
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 26px;
+                    height: 19px;
+                    top: 2px;
+                    right: -13px;
+                    background: url("./img/new.png") no-repeat center;
+                    background-size: 100% 100%;
+                }
+            } */
+
+            a {
+                height: 100%;
+                color: #616161;
+                font-size: 18px;
+
+                &:hover {
+                    color: #1482f0;
+                }
+            }
+
+            &.active {
+                a {
+                    color: #1482f0;
+                }
+            }
+
+            .new-icon {
+                position: absolute;
+                top: 8px;
+                right: -6px;
+            }
+        }
+    }
+
+    .search-content-div {
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 145px;
+        margin: auto;
+        display: inline-block;
+        cursor: pointer;
+
+        .search-box-btn {
+            position: absolute;
+            top: 20px;
+            left: -27px;
+            width: 19px;
+            height: 19px;
+            background: url("../img/header/search-btn.png") right center no-repeat;
+
+            &:hover {
+                background: url("../img/header/search-btn-hover.png") right center no-repeat;
+            }
+
+            .search-content {
+                display: none;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -161px;
+                width: 155px;
+                margin: auto;
+                height: 25px;
+                color: #616161;
+                font-size: 14px;
+                border-bottom: 1px solid #bdbdbd;
+
+                &.active {
+                    display: block;
+                }
+
+                .search-input {
+                    position: absolute;
+                    right: 0;
+                    width: 140px;
+                    height: 25px;
+                    outline: none;
+                    border: none;
+                    background: #fff;
+                    padding-right: 10px;
+                    z-index: 50;
+                }
+            }
+        }
+
+        span {
+            position: absolute;
+            right: -107px;
+            top: 25px;
+            z-index: 55;
+
+            &.close {
+                display: none;
+                width: 10px;
+                height: 10px;
+                background: url("../img/header/close.png") no-repeat;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .login-content {
+        width: auto;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 45px;
+        color: #616161;
+
+        .separation {
+            display: inline-block;
+            height: 15px;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        span,
+        a {
+            display: inline-block;
+            max-width: 70px;
+            font-size: 16px;
+            margin-right: 12px;
+            cursor: pointer;
+            height: 25px;
+            color: #616161;
+
+            &:hover {
+                color: #1482f0;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        .login-active {
+            color: #1482f0;
+        }
+    }
+
+    .wx-ewm {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        cursor: pointer;
+        width: 22px;
+        height: 18px;
+        background: url("../img/header/wx-ewm.png") no-repeat;
+
+        &:hover {
+            background: url("../img/header/wx-ewm-h.png") no-repeat;
+
+            .wx-ewm-img {
+                display: block;
+            }
+        }
+
+        .wx-ewm-img {
+            position: absolute;
+            width: 207px;
+            height: 116px;
+            display: none;
+            padding: 25px 18px;
+            right: -18px;
+            top: 20px;
+            z-index: 100;
+            background: url("../img/header/wem-bg.png") no-repeat;
+
+            img {
+                display: inline-block;
+                width: 98px;
+                height: 123px;
+                float: left;
+
+                &:nth-child(2) {
+                    margin-left: 11px;
+                }
+            }
+        }
+    }
+}
+
+/* 行情滚动信息 */
+.header-roll-msg-wrap {
+    background: #050933;
+}
+
+.header-roll {
+    margin: 0 auto;
+    width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    background: #050933;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+
+    @media (max-width: 1440px) {
+        & {
+            font-size: 14px;
+        }
+    }
+
+    .coin-info {
+        float: left;
+        display: block;
+        width: 33.33%;
+        text-align: center;
+
+        .price {
+            margin: 0 30px 0 5px;
+        }
+
+        .rate {
+            position: relative;
+
+            .trend {
+                display: inline-block;
+                border: 5px solid transparent;
+                position: absolute;
+            }
+
+            &.down {
+                color: #ef5350;
+
+                .trend {
+                    top: -15%;
+                    transform: translate(-160%, 100%);
+                    border-top: 5px solid #ef5350;
+                }
+            }
+
+            &.up {
+                color: #66bb6a;
+
+                .trend {
+                    top: 62%;
+                    transform: translate(-160%, -100%);
+                    border-bottom: 5px solid #66bb6a;
+                }
+            }
+        }
+    }
+}
+
+/* 登陆 */
+.login-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+
+    input {
+        outline: none;
+    }
+
+    .login-con {
+        margin-left: -(120 * 2 + 342)/2 + px;
+        padding: 0 120px 20px;
+        position: fixed;
+        left: 50%;
+        //top: 230px;
+        background: #f6f6f6;
+        border-radius: 5px;
+        width: 342px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        h1 {
+            color: #1979f4;
+            font-size: 30px;
+            line-height: 74px;
+            text-align: center;
+        }
+
+        .login-item {
+            margin-bottom: 10px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            height: 54px;
+            width: 340px;
+
+            &.phone-item {
+                position: relative;
+
+                .phone-code {
+                    float: left;
+                    width: 57px;
+                    height: 100%;
+                    line-height: 54px;
+                    color: #474747;
+                    font-size: 16px;
+                    cursor: pointer;
+
+                    img {
+                        vertical-align: middle;
+                        margin-left: 10px;
+                    }
+                }
+
+                input {
+                    width: 218px;
+                }
+            }
+
+            &.auth-code-item {
+                input {
+                    width: 150px;
+                }
+
+                a {
+                    float: right;
+                    background: #f1f1f1;
+                    border-left: 1px solid #d6d6d6;
+                    display: block;
+                    height: 100%;
+                    width: 128px;
+                    color: #1979f4;
+                    line-height: 54px;
+                    text-align: center;
+                }
+            }
+
+            & > span {
+                float: left;
+                display: block;
+                height: 100%;
+                width: 60px;
+                text-align: center;
+
+                img {
+                    margin-top: 15px;
+                    display: inline-block;
+                }
+            }
+
+            input {
+                float: right;
+                border: none;
+                height: 100%;
+                color: #999;
+                font-size: 16px;
+                width: 275px;
+            }
+        }
+
+        button {
+            background: #1979f4;
+            border: none;
+            cursor: pointer;
+            display: block;
+            height: 56px;
+            width: 100%;
+            color: #fff;
+            font-size: 24px;
+            line-height: 56px;
+            text-align: center;
+            text-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .login-tips {
+            color: #474747;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+
+            p {
+                float: left;
+            }
+
+            a {
+                color: #1979f4;
+            }
+
+            .forget-password {
+                float: right;
+            }
+        }
+    }
+
+    .login-close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        height: 22px;
+        width: 22px;
+    }
+}
