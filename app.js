@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // logger
-const logDir = '/data/node_site/www.eosgalaxy.io/logs'
+const logDir = '/data/node_site/www.E.io/logs'
 fs.existsSync(logDir) || fs.mkdirSync(logDir)
 const accessLogStream = fileStreamRotator.getStream({
     date_format: 'YYYYMMDD',
