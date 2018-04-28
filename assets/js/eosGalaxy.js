@@ -11,7 +11,7 @@ import {pageLoadingHide, isPc} from './public/public'
 $(function () {
     pageLoadingHide()
     if (!isPc()) {
-        window.location.href = '/eosGalaxyM'
+        window.location.href = '/m'
     }
     let nav = [
         {name: '首页', path: 'home'},
