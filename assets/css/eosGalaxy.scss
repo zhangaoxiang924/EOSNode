@@ -267,6 +267,39 @@
                 .ecology-img {
                     border-radius: 20px;
                     overflow: hidden;
+                    position: relative;
+                    transition: 0.2s;
+
+                    .mask {
+                        text-align: center;
+                        background: rgba(0, 0, 0, 0.7);
+                        border-radius: 20px;
+                        width: 100%;
+                        height: 360px;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        color: #fff;
+                        font-size: 18px;
+                        line-height: 42px;
+                        transition: 0.2s;
+                        opacity: 0;
+
+                        p {
+                            height: 160px;
+                            padding: 0 20px;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+
+                    &:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+                    }
                 }
 
                 .ecology-name {
@@ -285,6 +318,7 @@
         height: 900px;
         background: url("../img/eosGalaxy/team-bg.jpg") no-repeat top;
         background-size: cover;
+        position: relative;
 
         .team-partner {
             width: 1200px;
@@ -329,6 +363,34 @@
                         line-height: 20px;
                     }
                 }
+            }
+        }
+
+        .swiper-button-prev {
+            opacity: 1;
+            background: url("../img/eosGalaxy/leftBtn.png") no-repeat center / 100%;
+            width: 36px;
+            height: 57px;
+            left: 270px;
+            z-index: 10;
+            transition: 0.2s;
+
+            &:hover {
+                background: url("../img/eosGalaxy/leftBtn-hover.png") no-repeat center / 100%;
+            }
+        }
+
+        .swiper-button-next {
+            opacity: 1;
+            background: url("../img/eosGalaxy/rightBtn.png") no-repeat center / 100%;
+            width: 36px;
+            height: 57px;
+            right: 270px;
+            z-index: 10;
+            transition: 0.2s;
+
+            &:hover {
+                background: url("../img/eosGalaxy/rightBtn-hover.png") no-repeat center / 100%;
             }
         }
     }

@@ -22,7 +22,7 @@ function createLights() {
 }
 function createScene() {
     width = window.innerWidth;
-    height = window.innerHeight;
+    height = 947;
     ratio = width / height;
     w2 = width / 2;
     h2 = height / 2;
@@ -80,7 +80,7 @@ function addListeners() {
 
     function onWindowResize() {
         width = window.innerWidth;
-        height = window.innerHeight;
+        height = 947;
         w2 = width / 2;
         h2 = height / 2;
         renderer.setSize(width, height);

@@ -9,10 +9,11 @@
 import {pageLoadingHide, isPc} from './public/public'
 
 $(function () {
-    pageLoadingHide()
     if (!isPc()) {
         window.location.href = '/m'
+        return false
     }
+    pageLoadingHide()
     let nav = [
         {name: '首页', path: 'home'},
         {name: '介绍', path: 'describe'},
@@ -58,4 +59,21 @@ $(function () {
             }
         }
     })
+
+    let hot = new Swiper('.team-swiper', {
+        autoplay: {
+            delay: 4000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+        },
+        slidesPerView: 4,
+        observer: true,
+        preventClicks: false,
+        observeParents: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    })
+    hot.autoplay = true
 })

@@ -9,10 +9,11 @@
 import {pageLoadingHide, isPc} from './public/public'
 
 $(function () {
-    pageLoadingHide()
     if (isPc()) {
         window.location.href = '/'
+        return false
     }
+    pageLoadingHide()
     let nav = [
         {name: '首页', path: 'home'},
         {name: '介绍', path: 'describe'},
